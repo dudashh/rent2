@@ -32,6 +32,10 @@ export default {
         exclude: /node_modules/,
         use: 'babel-loader',
       },
+      {
+        test: /\.css$/, // Додаємо правило для CSS
+        use: ['style-loader', 'css-loader'], // Використовуємо style-loader та css-loader
+      },
     ],
   },
   plugins: [
