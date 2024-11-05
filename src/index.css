@@ -5,13 +5,58 @@
 body{
     background: #ffffff;
     color: black;
+    height: 100%;
+    width: 100%;
 }
 
-.navbar{
-    width: 100%;
-    height: 100px;
+.header {
+    background-color: #4e4e4e; /* Фон заголовка */
+    padding: 20px;
+    
+}
+
+.nav {
     display: flex;
-    align-items: center;
-    padding-left: 250px;
-background-color: rgb(137, 137, 250);
+    justify-content: space-between; /* Розміщує пункти меню по краях */
+    align-items: center; /* Центрує вертикально */
+}
+
+.nav-list {
+    list-style-type: none; /* Прибирає маркери */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Вирівнює пункти меню в ряд */
+    justify-content: center; /* Центрує пункти меню */
+    flex: 1; /* Застосування flex для заповнення простору */
+}
+
+.nav-item {
+    margin: 0 100px; /* Відстань між пунктами меню */
+}
+
+.nav-item a {
+    color: white; /* Колір тексту */
+    text-decoration: none; /* Прибирає підкреслення */
+}
+
+.nav-button {
+    background-color: #ff7f50; /* Колір кнопки */
+    color: white; /* Колір тексту кнопки */
+    border: none; /* Без обводки */
+    padding: 10px 15px; /* Внутрішні відступи */
+    cursor: pointer; /* Курсор у вигляді руки */
+    transition: background-color 0.3s; /* Плавний перехід */
+    margin-left: 20px; /* Відстань між меню і кнопкою */
+}
+
+.nav-button:hover {
+    background-color: #ff6347; /* Зміна кольору при наведенні */
+}
+
+.bmw {
+        background-image: url('./images/intro-bg-3.png');
+        background-size: cover; 
+        background-position: center; 
+        height: 800px; 
+        display: flex;
 }
