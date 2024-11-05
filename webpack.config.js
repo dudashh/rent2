@@ -36,6 +36,19 @@ export default {
         test: /\.css$/, // Додаємо правило для CSS
         use: ['style-loader', 'css-loader'], // Використовуємо style-loader та css-loader
       },
+      {
+        test: /\.(png|jpg|gif|svg)$/, // Для зображень
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[hash].[ext]',
+              outputPath: 'images/', // Директорія для зображень у вихідній папці
+              publicPath: 'images/' // Шлях до зображень для браузера
+            }
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -44,3 +57,4 @@ export default {
     }),
   ],
 };
+

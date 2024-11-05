@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./components/Header.js";
-import Navig from "./components/Navig.js";
+import Header from "./components/Header.jsx";
+import Navig from "./components/Navig.jsx";
 
 const App = () =>{
     return (
