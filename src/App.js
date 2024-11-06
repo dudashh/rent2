@@ -19,7 +19,7 @@ const App = () => {
       
       <Routes>
         
-        <Route path="/" element={<><Navig /><Main /><Carusel /><Footer /></>} /> {/* Маршрут для головної сторінки */}
+        <Route path="/" element={<><Navig /><Main /><Carusel /><Footer /></>} /> 
         
         
         <Route path="/Used" element={<Used />} />
