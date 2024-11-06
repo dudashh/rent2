@@ -1,8 +1,10 @@
-*{
+/* Скидаємо стандартні відступи для всіх елементів */
+* {
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     background: #ffffff;
     color: black;
     height: 100%;
@@ -12,7 +14,6 @@ body{
 .header {
     background-color: #4e4e4e; /* Фон заголовка */
     padding: 20px;
-    
 }
 
 .nav {
@@ -31,7 +32,7 @@ body{
 }
 
 .nav-item {
-    margin: 0 100px; /* Відстань між пунктами меню */
+    margin: 0 20px; /* Відстань між пунктами меню */
 }
 
 .nav-item a {
@@ -53,10 +54,216 @@ body{
     background-color: #ff6347; /* Зміна кольору при наведенні */
 }
 
+/* Контейнер для фонових зображень */
 .bmw {
-        background-image: url('./images/intro-bg-3.png');
-        background-size: cover; 
-        background-position: center; 
-        height: 800px; 
-        display: flex;
+    display: flex;
+    justify-content: flex-start; /* Вирівнювання по лівому краю */
+    align-items: flex-start; /* Вирівнювання по верхньому краю */
+    flex-direction: column; /* Визначаємо вертикальне вирівнювання */
+    height: 800px;
+    width: 100%;
+    background-image: url('./images/intro-bg-3.png');
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
 }
+
+/* Стилі для картинки автомобіля */
+.car-image {
+    width: 800px; 
+    height: 300px; 
+    z-index: 2; /* Ставимо авто на передній план */
+    margin-top: -550px;
+    margin-left: 770px;
+}
+
+/* Стилі для фону */
+.back {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Ставимо фон на задній план */
+}
+
+/* Заголовок */
+p {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left; /* Вирівнювання тексту по лівому краю */
+    color: #333;
+    margin-top: -230px;
+    margin-left: 20%;
+}
+
+/* Стилі для кнопки */
+.nav-button1 {
+    padding: 10px 20px; /* Відступи всередині кнопки */
+    font-size: 1rem; /* Розмір тексту в кнопці */
+    background-color: #007bff; /* Фоновий колір кнопки */
+    color: #fff; /* Колір тексту на кнопці */
+    border: none; /* Видаляє рамку кнопки */
+    border-radius: 5px; /* Згладжує кути кнопки */
+    cursor: pointer; /* Змінює курсор на вказівник */
+    transition: background-color 0.3s ease; /* Додає плавний перехід для зміни кольору */
+    margin-top: 30px; /* Відстань між текстом і кнопкою */
+    margin-left: 30%;
+}
+
+.main {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .steps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* дозволяє переносити блоки, якщо місця недостатньо */
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .step {
+    width: 200px; /* Задайте ширину, щоб усі елементи були однаковими */
+    text-align: center;
+  }
+  
+  .icon {
+    font-size: 80px;
+    
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 80px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+.maintx{
+    font-size: 12px;
+  color: #555;
+  margin-top: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .why-us-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .car-image1 {
+    width: 650px;
+    height: 500px;
+    margin-left: 200px;
+  }
+  
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+  
+  .benefits-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .learn-more-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .learn-more-button:hover {
+    background-color: #0056b3;
+  }
+
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 600px;
+    margin: auto;
+  }
+  
+  .carousel-images {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    gap: 80px;
+  }
+  
+  .carousel-image {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    object-fit: cover;
+    
+  }
+  
+  .carousel-image.large {
+    width: 300px;
+    height: 200px;
+    transform: scale(1.2); /* Збільшений центральний елемент */
+  }
+  
+  .carousel-image.small {
+    width: 150px;
+    height: 100px;
+    opacity: 0.6; /* Зменшена прозорість для бокових елементів */
+  }
+  
+  .carousel-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .carousel-button.left {
+    left: 0;
+    color: #ffffff;
+    opacity: 0;
+  }
+  
+  .carousel-button.right {
+    right: 0;
+    opacity: 0;
+  }
+  
+  
+
+
+
+  
