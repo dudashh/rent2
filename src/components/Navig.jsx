@@ -8,7 +8,7 @@ export default function navig() {
       <img src={introBg} alt="back" className="back"/>
       <img src={carImage} alt="Car Image" className="car-image"/>
 <p>FIND YOUR CAR DREAM</p>
-<button className="nav-button1">Контакти</button>
+<button className="nav-button1">SEARCH</button>
     </div>
   )
 }

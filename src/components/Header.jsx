@@ -1,17 +1,36 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Modal from "./Modal";
 
-export default function Header() {
+function Header() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <header className="header">
-            <nav className="nav">
-                <ul className="nav-list">
-                    <li className="nav-item"><Link to="/">Головна</Link></li>
-                    <li className="nav-item"><Link to="/Used">Про нас</Link></li>
-                    <li className="nav-item"><Link to="/Sell">Послуги</Link></li>
-                </ul>
-                <button className="nav-button">Контакти</button>
-            </nav>
-        </header>
-  )
+      <nav className="nav">
+        <ul className="nav-list">
+          <li className="nav-item">
+            <Link to="/">HOME</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/Used">USED CAR</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/Sell">SELL MY</Link>
+          </li>
+        </ul>
+        <button className="nav-button" onClick={toggleModal}>
+          LOGIN/REGISTER
+        </button>
+        <Modal show={isModalOpen} onClose={toggleModal} />
+      </nav>
+    </header>
+  );
 }
+
+export default Header;
+

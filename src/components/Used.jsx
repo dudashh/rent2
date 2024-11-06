@@ -3,7 +3,7 @@ import Listing from '../images/listing-page-header-img.png';
 import Tesla from '../images/blog_img4.png';
 
 export default function Used() {
-  const [sortCriteria, setSortCriteria] = useState(''); // Стан для критерію сортування
+  const [sortCriteria, setSortCriteria] = useState(''); 
   const [cars, setCars] = useState([
     {
       id: 1,
@@ -49,16 +49,16 @@ export default function Used() {
     },
   ]);
 
-  // Функція для сортування
+  
   const handleSortChange = (e) => {
     const criteria = e.target.value;
     setSortCriteria(criteria);
 
     const sortedCars = [...cars].sort((a, b) => {
       if (criteria === 'price') {
-        return a.price - b.price; // Сортування за ціною
+        return a.price - b.price; 
       } else if (criteria === 'year') {
-        return b.year - a.year; // Сортування за роком (від найновішого до найстарішого)
+        return b.year - a.year; 
       }
       return 0;
     });
@@ -90,7 +90,7 @@ export default function Used() {
             </div>
             <div className="car-buttons">
               <button className="rent-button">Орендувати</button>
-              <button className="response-button">Зв'язатися</button>
+              <button className="response-button">Оцінити</button>
             </div>
           </div>
         </div>

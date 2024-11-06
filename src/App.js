@@ -8,12 +8,13 @@ import { Routes, Route } from 'react-router-dom';
 import Used from "./components/Used.jsx";
 import Sell from "./components/Sell.jsx";
 
+
 const App = () => {
   return (
     <div className="wraper">
       
       <Header />
-     
+
 
       
       <Routes>
