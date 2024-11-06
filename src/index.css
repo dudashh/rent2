@@ -11,6 +11,13 @@ body {
     width: 100%;
 }
 
+.wraper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Забезпечує, щоб висота була не меншою за висоту вікна */
+  }
+  
+
 .header {
     background-color: #4e4e4e; /* Фон заголовка */
     padding: 20px;
@@ -262,8 +269,241 @@ p {
     opacity: 0;
   }
   
+.fot{
+    width: 100%;
+    height: 300px;
+   margin-top: 100px;
+    background-color: #012730;
+    margin: 0;
+}
   
+.car-image2{
+width: 100%;
+height: 200px;
+}
 
+/* CarCard.css */
 
+.car-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 800px;
+    margin-left: 170px;
+    background-color: #fff;
+    margin-top: 10px;
+  }
+  
+  .car-image4 {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 4px;
+  }
+  
+  .car-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .car-characteristics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .car-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .rent-button, .response-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 45px;
+  }
+  
+  .rent-button {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  .response-button {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  .car-characteristics p {
+    font-size: 14px; /* Розмір шрифту */
+    color: #333; /* Колір тексту */
+    margin: 5px 0; /* Відступ зверху і знизу */
+    line-height: 1.4; /* Висота рядка */
+    text-align: center; /* Вирівнювання тексту по центру */
+    font-weight: 500; /* Товщина шрифту */
+  }
+  
+/* App.css */
 
+.sort-container {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 800px;
+  }
+  
+  #sort {
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .dealer-contact {
+    background-color: #D9D9D9;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    border-radius: 2px;
+    position: relative;
+    top: -780px;
+    left: 1200px;
+  }
+  
+  .dealer-contact p {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: bold;
+    padding-top: 30px;
+  }
+  
+  .contact-button {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .tre{
+    width: 100%;
+    height: 200px;
+    }
+  
+  /* Загальний контейнер для форми */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #ffffff;
+  }
+  
+  .form-wrapper {
+    border: 1px solid #ffffff;
+    padding: 40px;
+    
+    background-color: #ffffff;
+    
+    position: relative;
+  }
+  
+  .form-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .text-column {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .text-items {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-right: 900px;
+  }
+  
+  .text-items p {
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .divider {
+    width: 1px;
+    height: 200px;
+    background-color: #000000;
+    margin-left: 20px;
+    position: relative;
+    right: 900px;
+  }
+  
+  .input-field {
+    margin-bottom: 15px;
+  }
+  
+  .input-field input {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    position: relative;
+    left: 300px;
+    top: -200px;
+  }
+  
+  .input-field input::placeholder {
+    color: #888;
+  }
+  
+  .gray-box {
+    width: 100px;
+    height: 100px;
+    background-color: #4b4b4b;
+    margin: 20px auto;
+    position: relative;
+    top: -150px;
+    right: 230px;
+  }
+  
+  .submit-button {
+    display: block;
+    width: 20%;
+    padding: 12px;
+    background-color: #f05d5e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    right: -500px;
+    top: -100px;
+  }
+  
+  .submit-button:hover {
+    background-color: #e04a4b;
+  }
   
